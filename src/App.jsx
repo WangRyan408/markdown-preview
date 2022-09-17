@@ -6,14 +6,17 @@ import './App.css';
 function Markdown() {
   const [max, setMax] = useState(false);
   const [input, setInput] = useState(lorem);
-
+  
 
   return (
     <div className="App">
       <div id="editor">
-
+        <div className="title-bar" id="editor-title"></div>
+        <textarea type="text"></textarea>
       </div>
-          
+      <div id="previewer">
+        <div className="title-bar" id="preview-title"></div>
+      </div>
     </div>
   );
 }

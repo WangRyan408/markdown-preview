@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .App {
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    outline: 1px solid brown;
+
+  }
+  
+  #editor,
+   #previewer {
+    width: 50%;
+    
+   
+  }
+  
+  .content {
+      width: 99%;
+      height: 95vh;
+      min-height: 200px;
+      margin-bottom: -5px;
+      resize: vertical;
+      padding-left: 5px;
+      padding-top: 5px;
+      font-size: 0.875rem;
+      outline: 1px solid black;
+      overflow-wrap: break-word;
+      border-collapse: collapse;
+    }
+  
+    img {
+      max-width: 90%;
+    }

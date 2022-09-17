@@ -1,25 +1,31 @@
 import React from 'react';
+
 import { marked } from 'marked';
 import { useState } from 'react';
 import './App.css';
 
+
+
 function Markdown() {
   const [max, setMax] = useState(false);
   const [input, setInput] = useState(lorem);
-  
+  const html = marked.parse(lorem);
 
   return (
     <div className="App">
       <div id="editor">
-        <div className="title-bar" id="editor-title"></div>
-        <textarea type="text"></textarea>
+        <div className="title-bar" id="editor-title">Editor</div>
+        <textarea type="text" className="content">{lorem}</textarea>
       </div>
       <div id="previewer">
-        <div className="title-bar" id="preview-title"></div>
+        <div className="title-bar" id="preview-title">Preview</div>
+        <div className="content" dangerouslySetInnerHTML={{__html: html}}></div>
       </div>
     </div>
   );
 }
+
+
 
 
 const lorem = `# Welcome to my React Markdown Previewer!

@@ -7,15 +7,14 @@ import './App.css';
 
 
 function Markdown() {
-  const [max, setMax] = useState(false);
   const [input, setInput] = useState(lorem);
-  const html = marked.parse(lorem);
+  const html = marked.parse(input);
 
   return (
     <div className="App">
       <div id="editor">
         <div className="title-bar" id="editor-title">Editor</div>
-        <textarea type="text" className="content">{lorem}</textarea>
+        <textarea type="text" className="content" value={input} onChange={(e) => setInput(e.target.value)}>{lorem}</textarea>
       </div>
       <div id="previewer">
         <div className="title-bar" id="preview-title">Preview</div>

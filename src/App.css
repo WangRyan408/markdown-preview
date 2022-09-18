@@ -2,25 +2,27 @@
     box-sizing: border-box;
   }
   
-  
-  
+
   .App {
-    
     height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: center;
-    outline: 1px solid brown;
+    outline: none;
 
   }
   
-  #editor,
+  #edit,
    #previewer {
     width: 50%;
     
    
+  }
+
+  #preview {
+    overflow-y: scroll;
   }
   
   .content {
@@ -39,6 +41,7 @@
   
     img {
       max-width: 90%;
+      max-height: 50px;
     }
 
     blockquote {
@@ -50,4 +53,9 @@
     td, th {
       border-collapse: collapse;
       border: 2px solid black;
+    }
+
+    code {
+      background-color: dimgrey;
+      color: white;
     }
